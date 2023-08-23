@@ -3,7 +3,9 @@ import type { Metadata } from 'next'
 import { Inter, Ubuntu } from 'next/font/google'
 import Navbar from './components/Navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-import Modal from './components/Modals/Modal'
+// import Modal from './components/Modals/Modal'
+import RegisterModal from './components/Modals/RegisterModal'
+import ToasterProvider from './providers/ToasterProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
-          <Modal isOpen title="helloworld"/>
+          <ToasterProvider />
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
