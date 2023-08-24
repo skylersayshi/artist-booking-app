@@ -98,6 +98,7 @@ const Modal: React.FC<ModalProps> = ({isOpen, onClose, onSubmit, title, body, fo
                                     onClick={handleSubmit}
                                 />
                             </div>
+                            {footer}
                         </div>
                     </div>
                 </div>
